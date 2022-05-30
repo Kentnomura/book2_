@@ -2,12 +2,13 @@
   <tbody>
     <% book.book_comments.each do |book_comment| %>
     <tr>
-      <td>
+      <td width="20%">
         <%= link_to user_path(book_comment.user) do %>
-          <%= image_tag book_comment.user.get_profile_image, size: "50x50" %><br>
+          <%= image_tag book_comment.user.get_profile_image, size: "50x50" %>
           <%= book_comment.user.name %>
         <% end %>
       </td>
+      <td width="5%"></td>
       <td><%= book_comment.comment %></td>
       <td>
         <% if book_comment.user == current_user %>
